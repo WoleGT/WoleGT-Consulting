@@ -42,16 +42,16 @@
 <nav class="navbar navbar-dark bg-primary">
   <div class="container-fluid justify-content-center">
     <span class="navbar-text text-white">
-      “The Lord gave the word; great was the company of those who published it” — Psalm 68:11
+      “The Lord gave the word; great was the company of those who published it” - Psalm 68:11
     </span>
   </div>
 </nav>
 
-<h2 class="text-center my-4">Author - WoleGT</h2>
+<h2 class="text-center my-3" style="color: white; padding-bottom: 2%;">Thank you for coming to download my books - WoleGT</h2>
 
 <div class="container">
   <div class="row" id="bookGrid">
-    <!-- Book cards will be injected here -->
+    <!-- Book cards are injected here -->
   </div>
 
   <!-- Pagination -->
@@ -61,27 +61,9 @@
 </div>
 
 <script>
-  // Example book data
-  const books = [
-    {
-      title:"WALK BEFORE ME", 
-      review:"A call to intimate walk with the Lord.", 
-      file:"images/MY SCHOOL OF PRAYER.pdf",
-      image:"images/jpg",
-      reviews: [ 
-        "The book is apt to our present days filled with a lot of distractions- Pst Julius Oyindo" ,
-        "The book shines spotlight on following the Master's pattern - Pst Sunday Abaya." 
-               ]
-    },
-    {title:"CENTRALITY OF ANOINTING", 
-    review:"Exploring the power of anointing.", 
-    file:"images/MY SCHOOL OF PRAYER.pdf",
-    image:"images/book-3.png",
-    reviews: [ 
-      "Please take time to read this book - Barr Asenath Udokanma", 
-      "Loved the depth of teaching." 
-            ]
-    },
+  // Book data
+  const books = 
+  [
     {title:"MY SCHOOL OF PRAYER", 
     review:"An exposition on the subject of prayer.", 
     file:"images/My School of Prayer by Oluwole George-Taylor.pdf",
@@ -91,12 +73,32 @@
       "Oluwole paints a picture of the possibilities we can attain when we become men and women of prayer - Pst Isama Obaa" 
             ]
     },
-    {title:"THE COST OF OBIDIENCE", 
+    {
+      title:"WALK BEFORE ME", 
+      review:"A call to intimate walk with the Lord.", 
+      file:"images/MY SCHOOL OF PRAYER.pdf",
+      image:"images/book-4.jpeg",
+      reviews: [ 
+        "The book is apt to our present days filled with a lot of distractions - Pst Julius Oyindo" ,
+        "The book shines spotlight on following the Master's pattern - Pst Sunday Abaya." 
+               ]
+    },
+    {title:"THE CENTRALITY OF ANOINTING", 
+    review:"Exploring the power of anointing.", 
+    file:"images/MY SCHOOL OF PRAYER.pdf",
+    image:"images/book-3.png",
+    reviews: [ 
+      "Please take time to read this book - Barr Asenath Udokanma", 
+      "Loved the depth of teaching in this book." 
+            ]
+    },
+    
+    {title:"THE COST OF OBEDIENCE", 
     review:"A deep dive into obedience and faith.", 
     file:"images/THE COST OF OBEDIENCE.pdf",
     image:"images/book-2.jpg",
     reviews: [ 
-       "Jesus learnt the cost of obedience because he never disobeyed - Joyce Meyer", 
+       "Jesus learnt the cost of obedience because he never disobeyed yet he suffered - Joyce Meyer", 
        "Cost of Obedience is when you do the right thing when it doesnt feel right but because you love God." 
            ]
     }
@@ -105,12 +107,13 @@
   const perPage = 2;
   let currentPage = 1;
 
-  function renderBooks(page) {
+  function renderBooks(page) 
+  {
   const start = (page-1)*perPage;
   const end = start+perPage;
   const slice = books.slice(start,end);
 
-  const grid = document.getElementById("bookGrid"); // ✅ FIX
+  const grid = document.getElementById("bookGrid"); 
 
   grid.innerHTML = slice.map(book => `
   <div class="col-12 col-md-6 mb-4">
@@ -127,13 +130,13 @@
       </div>
     </div>
   </div>
-`).join("");
-
-}
+   `).join("");
+  }
 
  
 
-  function renderPagination() {
+  function renderPagination() 
+  {
     const totalPages = Math.ceil(books.length/perPage);
     const pag = document.getElementById("pagination");
     pag.innerHTML = "";
@@ -147,7 +150,8 @@
     }
   }
 
-  function goToPage(page){
+  function goToPage(page)
+  {
     currentPage = page;
     renderBooks(page);
     renderPagination();

@@ -47,7 +47,7 @@
   </div>
 </nav>
 
-<h2 class="text-center my-3" style="color: white; padding-bottom: 2%;">Thank you for coming to download my books - WoleGT</h2>
+<h2 class="text-center my-3" style="color: white; padding-bottom: 2%;">Thank you for your interest in my books. God bless you! - WoleGT</h2>
 
 <div class="container">
   <div class="row" id="bookGrid">
@@ -76,7 +76,7 @@
     {
       title:"WALK BEFORE ME", 
       review:"A call to intimate walk with the Lord.", 
-      file:"images/MY SCHOOL OF PRAYER.pdf",
+      file:"images/Walk Before Me.pdf",
       image:"images/book-4.jpeg",
       reviews: [ 
         "The book is apt to our present days filled with a lot of distractions - Pst Julius Oyindo" ,
@@ -85,7 +85,7 @@
     },
     {title:"THE CENTRALITY OF ANOINTING", 
     review:"Exploring the power of anointing.", 
-    file:"images/MY SCHOOL OF PRAYER.pdf",
+    file:"images/The Centrality of Anointing.pdf",
     image:"images/book-3.png",
     reviews: [ 
       "Please take time to read this book - Barr Asenath Udokanma", 
@@ -95,7 +95,7 @@
     
     {title:"THE COST OF OBEDIENCE", 
     review:"A deep dive into obedience and faith.", 
-    file:"images/THE COST OF OBEDIENCE.pdf",
+    file:"images/The Cost of Obedience.pdf",
     image:"images/book-2.jpg",
     reviews: [ 
        "Jesus learnt the cost of obedience because he never disobeyed yet he suffered - Joyce Meyer", 
@@ -122,7 +122,7 @@
       <div class="card-body">
         <h5 class="card-title">${book.title}</h5>
         <p class="card-text">${book.review}</p>
-        <a href="${book.file}" class="btn btn-outline-dark">Download</a>
+        <a href="${book.file}" class="btn btn-outline-dark" target="_blank">Download</a>
         <hr>
         <div class="reviews">
           ${book.reviews ? book.reviews.map(r => `<p class="text-muted small">"${r}"</p>`).join("") : ""}
